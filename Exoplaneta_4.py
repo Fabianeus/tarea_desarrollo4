@@ -39,4 +39,15 @@ class Exoplaneta:
     def parametro_impact_exploplaneta (a, w, R):
         b = a * cos(i)* ((1 - (np.e**2))/(R*(1 + e*(np.sin(w)))))
         return b
+    def Density (Radios, Mass):
+        Densidad = []
+        volumen = []
+        for radio, T_mass in zip(Radios, Mass):
+            Volumen = ((radio**3) * np.pi)*(4/3)
+            volumen.append(Volumen)
+        for masa, vol in zip(volumen, Mass):
+            Den = (masa/vol)
+            Densidad.append(Den)
+        return Densidad
+   
 
