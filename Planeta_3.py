@@ -46,4 +46,7 @@ class Planetas:
     def T_kepleriana (self, G):
         Periodo = 2*np.pi*(((self.a**3)/(G*self.estrella_anfritiona.mass))**(1/2))
         return Periodo
+    def prom_mass (Mass):
+        promedio = sum(Mass)/len(Mass)
+        return promedio
 
