@@ -69,4 +69,15 @@ class estrellas:
     def Lumin_Secuencia (self):
         L_ms  = L_sun * ((self.mass/M_sun)**(3.5))
         return L_ms #Su secuencia principal
+    #Gravedad planetaria
+    
+
+    def planet_gravity (Masa, Radio):
+      Gravity_constant = 6.6743e-11
+      Grav_planet = []
+    
+      for m, rad in zip(Masa, Radio):
+          gr = (Gravity_constant * m)/(rad**2)
+          Grav_planet.append(gr)
+      return Grav_planet
 
